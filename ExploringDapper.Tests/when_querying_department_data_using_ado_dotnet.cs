@@ -39,11 +39,4 @@ namespace ExploringDapper.Tests
             departments[0].GroupName.Should().Be("Research and Development");
         }
     }
-
-    public class Department
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public string GroupName { get; set; }
-    }
 }
