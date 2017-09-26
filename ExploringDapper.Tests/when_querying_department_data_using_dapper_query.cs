@@ -13,7 +13,7 @@ namespace ExploringDapper.Tests
         private const string Sql = "SELECT * FROM [HumanResources].[Department] WHERE [DepartmentId] = 1";
 
         [Test]
-        public void it_should_get_the_data()
+        public void it_should_get_department_data()
         {
             IEnumerable<dynamic> departments;
             using (var sqlConnection = new SqlConnection(Constants.ConnectionString))

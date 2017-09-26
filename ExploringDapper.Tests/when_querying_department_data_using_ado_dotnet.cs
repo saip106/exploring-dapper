@@ -11,7 +11,7 @@ namespace ExploringDapper.Tests
         private const string Sql = "SELECT * FROM [HumanResources].[Department] WHERE [DepartmentId] = 1";
 
         [Test]
-        public void it_should_get_the_data()
+        public void it_should_get_department_data()
         {
             var departments = new List<Department>();
             using (var sqlConnection = new SqlConnection(Constants.ConnectionString))

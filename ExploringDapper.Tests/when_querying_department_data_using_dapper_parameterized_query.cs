@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
@@ -8,24 +8,25 @@ using NUnit.Framework;
 namespace ExploringDapper.Tests
 {
     [TestFixture]
-    public class when_querying_department_data_using_dapper_parameterized_generic_query
+    public class when_querying_department_data_using_dapper_parameterized_query
     {
         private const string Sql = "SELECT * FROM [HumanResources].[Department] WHERE [DepartmentId] = @DepartmentId";
 
         [Test]
         public void it_should_get_department_data()
         {
-            IList<Department> departments;
+            IEnumerable<dynamic> departments;
             using (var sqlConnection = new SqlConnection(Constants.ConnectionString))
             {
                 departments = sqlConnection
-                    .Query<Department>(Sql, new { DepartmentId = 1 })
+                    .Query(Sql, new { DepartmentId = 1 })
                     .ToArray();
             }
 
-            departments.Count.Should().Be(1);
-            departments[0].Name.Should().Be("Engineering");
-            departments[0].GroupName.Should().Be("Research and Development");
+            departments.Count().Should().Be(1);
+            var department = departments.ToArray()[0];
+            Assert.AreEqual(department.Name, "Engineering");
+            Assert.AreEqual(department.GroupName, "Research and Development");
         }
     }
 }
