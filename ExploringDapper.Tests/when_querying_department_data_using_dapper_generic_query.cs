@@ -10,14 +10,17 @@ namespace ExploringDapper.Tests
     [TestFixture]
     public class when_querying_department_data_using_dapper_generic_query
     {
+        private const string Sql = "SELECT * FROM [HumanResources].[Department] WHERE [DepartmentId] = 1";
+
         [Test]
         public void it_should_get_the_data()
         {
             IList<Department> departments;
             using (var sqlConnection = new SqlConnection(Constants.ConnectionString))
             {
-                const string sql = "SELECT * FROM [AdventureWorks].[HumanResources].[Department] WHERE [DepartmentId] = 1";
-                departments = sqlConnection.Query<Department>(sql).ToArray();
+                departments = sqlConnection
+                    .Query<Department>(Sql)
+                    .ToArray();
             }
 
             departments.Count.Should().Be(1);

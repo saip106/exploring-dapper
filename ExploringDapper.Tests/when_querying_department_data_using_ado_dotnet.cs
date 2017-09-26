@@ -8,6 +8,8 @@ namespace ExploringDapper.Tests
     [TestFixture]
     public class when_querying_department_data_using_ado_dotnet
     {
+        private const string Sql = "SELECT * FROM [HumanResources].[Department] WHERE [DepartmentId] = 1";
+
         [Test]
         public void it_should_get_the_data()
         {
@@ -17,7 +19,7 @@ namespace ExploringDapper.Tests
                 sqlConnection.Open();
                 using (var sqlCommand = sqlConnection.CreateCommand())
                 {
-                    sqlCommand.CommandText = "SELECT * FROM [AdventureWorks].[HumanResources].[Department] WHERE [DepartmentId] = 1";
+                    sqlCommand.CommandText = Sql;
                     using (var sqlDataReader = sqlCommand.ExecuteReader())
                     {
                         while (sqlDataReader.Read())
