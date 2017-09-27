@@ -60,12 +60,14 @@
     <Compile Include="Department.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="when_inserting_multiple_rows_data_using_dapper_execute.cs" />
     <Compile Include="when_inserting_single_row_data_using_dapper_execute.cs" />
     <Compile Include="when_querying_data_using_dapper_multiple_query.cs" />
     <Compile Include="when_querying_department_data_using_dapper_generic_query.cs" />
     <Compile Include="when_querying_department_data_using_dapper_parameterized_query.cs" />
     <Compile Include="when_querying_department_data_using_dapper_query.cs" />
     <Compile Include="when_querying_department_data_using_ado_dotnet.cs" />
+    <Compile Include="when_updatinging_single_row_data_using_dapper_execute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
