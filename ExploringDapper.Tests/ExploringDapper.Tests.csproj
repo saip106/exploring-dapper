@@ -60,14 +60,16 @@
     <Compile Include="Department.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="when_inserting_multiple_rows_data_using_dapper_execute.cs" />
-    <Compile Include="when_inserting_single_row_data_using_dapper_execute.cs" />
-    <Compile Include="when_querying_data_using_dapper_multiple_query.cs" />
-    <Compile Include="when_querying_department_data_using_dapper_generic_query.cs" />
-    <Compile Include="when_querying_department_data_using_dapper_parameterized_query.cs" />
-    <Compile Include="when_querying_department_data_using_dapper_query.cs" />
-    <Compile Include="when_querying_department_data_using_ado_dotnet.cs" />
-    <Compile Include="when_updatinging_single_row_data_using_dapper_execute.cs" />
+    <Compile Include="when_inserting_multiple_rows_data_using_dapper_execute.07.cs" />
+    <Compile Include="when_inserting_single_row_data_using_dapper_execute.06.cs" />
+    <Compile Include="when_querying_data_using_dapper_multiple_query.05.cs" />
+    <Compile Include="when_querying_department_data_using_dapper_async_query.cs" />
+    <Compile Include="when_querying_department_data_using_dapper_generic_query.04.cs" />
+    <Compile Include="when_querying_department_data_using_dapper_parameterized_query.03.cs" />
+    <Compile Include="when_getting_count_using_dapper_execute_scalar.09.cs" />
+    <Compile Include="when_querying_department_data_using_dapper_query.02.cs" />
+    <Compile Include="when_querying_department_data_using_ado_dotnet.01.cs" />
+    <Compile Include="when_updatinging_single_row_data_using_dapper_execute.08.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

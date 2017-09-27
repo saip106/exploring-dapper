@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Threading.Tasks;
 using Dapper;
 using FluentAssertions;
 using NUnit.Framework;
@@ -8,19 +9,17 @@ using NUnit.Framework;
 namespace ExploringDapper.Tests
 {
     [TestFixture]
-    public class when_querying_department_data_using_dapper_query
+    public class when_querying_department_data_using_dapper_async_query
     {
         private const string Sql = "SELECT * FROM [HumanResources].[Department] WHERE [DepartmentId] = 1";
 
         [Test]
-        public void it_should_get_department_data()
+        public async Task it_should_get_department_data()
         {
             IEnumerable<dynamic> departments;
             using (var sqlConnection = new SqlConnection(Constants.ConnectionString))
             {
-                departments = sqlConnection
-                    .Query(Sql)
-                    .ToArray();
+                departments = (await sqlConnection.QueryAsync(Sql)).ToArray();
             }
 
             departments.Count().Should().Be(1);
