@@ -59,6 +59,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_executing_a_sproc_using_dapper.14.cs" />
     <Compile Include="when_inserting_multiple_rows_data_using_dapper_execute.09.cs" />
@@ -72,7 +73,8 @@
     <Compile Include="when_getting_count_using_dapper_execute_scalar.11.cs" />
     <Compile Include="when_querying_department_data_using_dapper_query.05.cs" />
     <Compile Include="when_querying_department_data_using_ado_dotnet.01.cs" />
-    <Compile Include="when_querying_for_multiple_objects_using_dapper_query.15.cs" />
+    <Compile Include="when_querying_for_one_to_many_object_mapping_using_dapper_query.16.cs" />
+    <Compile Include="when_querying_for_one_to_one_object_mapping_using_dapper_query.15.cs" />
     <Compile Include="when_querying_some_columns_of_department_data_using_dapper_generic_query.03.cs" />
     <Compile Include="when_querying_some_columns_of_department_with_alias_using_dapper_generic_query.04.cs" />
     <Compile Include="when_updatinging_single_row_data_using_dapper_execute.10.cs" />

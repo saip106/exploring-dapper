@@ -7,14 +7,14 @@ using NUnit.Framework;
 namespace ExploringDapper.Tests
 {
     [TestFixture]
-    public class when_querying_for_multiple_objects_using_dapper_query
+    public class when_querying_for_one_to_one_object_mapping_using_dapper_query
     {
         private const string Sql = @"SELECT p.ProductID as Id, p.Name, p.ProductNumber, m.ProductModelID as Id, m.Name FROM Production.Product p
                                     INNER JOIN Production.ProductModel m on m.ProductModelID = p.ProductModelID
                                     WHERE ProductID = @ProductID";
 
         [Test]
-        public void it_should_get_department_data()
+        public void it_should_get_one_to_one_object_mapping_data()
         {
             Product[] products;
             using (var sqlConnection = new SqlConnection(Constants.ConnectionString))
@@ -37,18 +37,5 @@ namespace ExploringDapper.Tests
             products[0].ProductModel.Id.Should().Be(31);
             products[0].ProductModel.Name.Should().Be("Road-750");
         }
-    }
-
-    public class Product
-    {
-        public int Id { get; set; }
-        public string ProductNumber { get; set; }
-        public ProductModel ProductModel { get; set; }
-    }
-
-    public class ProductModel
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
     }
 }
