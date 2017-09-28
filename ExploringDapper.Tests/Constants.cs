@@ -2,6 +2,6 @@
 {
     public static class Constants
     {
-        public static string ConnectionString => "data source=localhost;initial catalog=AdventureWorks;persist security info=False;Integrated Security = true;";
+        public static string ConnectionString => "data source=localhost;initial catalog=AdventureWorks;Integrated Security = true;";
     }
 }

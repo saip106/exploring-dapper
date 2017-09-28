@@ -1,0 +1,10 @@
+﻿Frameworks
+	- Dapper
+	- NUnit
+	- Fluent.Assertions
+
+Database
+	- Northwind
+
+Unit (Integration) Testsing
+No mocking !!!
