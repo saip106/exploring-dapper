@@ -60,6 +60,7 @@
     <Compile Include="Department.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="when_executing_a_sproc_using_dapper.14.cs" />
     <Compile Include="when_inserting_multiple_rows_data_using_dapper_execute.09.cs" />
     <Compile Include="when_inserting_single_row_data_using_dapper_execute.08.cs" />
     <Compile Include="when_inserting_single_row_data_using_dapper_execute_using_transaction_commit.13.cs" />
